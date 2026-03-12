@@ -1,8 +1,12 @@
-import sys
-from particle_system import ParticleSystem
-from visualization import Visualizer
-
 if __name__ == '__main__':
-    particle_system = ParticleSystem()
-    visualizer = Visualizer(particle_system)
-    visualizer.run()
+    import sys
+    from particle_life import ParticleLife
+
+    # Initialize the simulation
+    simulation = ParticleLife()
+    
+    # Run the simulation
+    try:
+        simulation.run()
+    except Exception as e:
+        print(f'An error occurred during the simulation: {e}')
